@@ -20,6 +20,7 @@
                     if ($result->num_rows){
                         $row = $result->fetch_array(MYSQLI_NUM);
                         $result->close();
+                        error_reporting(0);
                         session_start();
                         $_SESSION['nombre']=$row[0];
                         $_SESSION['ide']=$row[2];
